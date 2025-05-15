@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catatan Transaksi Toko</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Catatan Transaksi Toko</h1>
+
+    <form id="transactionForm">
+      <input type="text" id="customer" placeholder="Nama Pembeli" required />
+
+      <div id="productsContainer">
+        <!-- Produk akan ditambahkan secara dinamis -->
+        <div class="product-row">
+          <input type="text" class="product-name" placeholder="Produk" required />
+          <input type="number" class="product-qty" placeholder="Jumlah" min="1" required />
+          <input type="number" class="product-price" placeholder="Harga Satuan" min="0" required />
+        </div>
+      </div>
+
+      <button type="button" id="addProductBtn">+ Tambah Produk</button>
+      <input type="date" id="date" value="" required />
+      <button type="submit">Tambah Transaksi</button>
+    </form>
+
+    <ul id="transactionList"></ul>
+
+    <div class="total" id="totalSales">Total Penjualan Hari Ini: Rp0</div>
+    <button type="button" id="downloadBtn" class="download-btn">Cetak Transaksi (.txt)</button>
+  </div>
+
+   <!-- Footer dengan Copyright -->
+  <footer class="footer">
+    &copy; 2025 Catatan Transaksi Toko | Dibuat oleh Arrafi Nur Hafiz
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
